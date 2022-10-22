@@ -37,7 +37,7 @@ export const SurpriseFundsStyle = styled.div`
 
     color: #ffffff;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 500px) {
     width: 400px;
     height: 350px;
   img {

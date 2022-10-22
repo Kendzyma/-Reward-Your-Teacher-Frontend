@@ -49,7 +49,7 @@ export const HowItWorksStyles = styled.div`
     top: 500px;
   }
 
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 500px) {
     display: flex;
     flex-direction: column;
     width: 400px;

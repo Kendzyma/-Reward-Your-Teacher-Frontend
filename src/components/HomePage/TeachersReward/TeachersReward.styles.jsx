@@ -93,7 +93,7 @@ export const TeachersRewardStyle = styled.div`
     font-weight: 800;
     font-size: 30px;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 500px) {
     width: 400px;
     display: flex;
     flex-direction: column;

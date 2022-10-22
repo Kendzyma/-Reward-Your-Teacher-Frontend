@@ -73,7 +73,7 @@ export const NavbarStyle = styled.div`
   .bars {
     display: none;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 500px) {
     padding-top: 2rem;
     display: flex;
     justify-content: center;

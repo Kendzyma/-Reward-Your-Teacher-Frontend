@@ -55,7 +55,7 @@ export const Footerstyle = styled.div`
     justify-content: space-around;
   }
 
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 500px) {
     display: flex;
     flex-direction: column;
     align-items: center;

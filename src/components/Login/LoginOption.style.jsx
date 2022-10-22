@@ -22,7 +22,7 @@ export const LoginOptionStyle = styled.div`
   .button:hover {
     background-color: green;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 500px) {
     .backgroundDiv {
       width: 380px;
       display: flex;

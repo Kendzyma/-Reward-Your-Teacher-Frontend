@@ -49,7 +49,7 @@ export const PartnerStyle = styled.div`
     width: 85px;
     height: 85px;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 500px) {
     display: flex;
     flex-direction: column;
     align-items: center;

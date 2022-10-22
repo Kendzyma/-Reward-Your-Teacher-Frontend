@@ -58,7 +58,7 @@ export const SendInstantStyle = styled.div`
     width: 40%;
     margin-left: 50px;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 500px) {
     display: flex;
     flex-direction: column;
     height: 180px;
