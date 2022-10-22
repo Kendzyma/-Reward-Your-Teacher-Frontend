@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const PartnerStyle = styled.div`
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,6 +51,7 @@ export const PartnerStyle = styled.div`
     height: 85px;
   }
   @media only screen and (max-width: 500px) {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,10 +63,10 @@ export const PartnerStyle = styled.div`
     left: 224px;
     top: 2733px;
   }
-  .img3{
-      display: none;
+  .img3 {
+    display: none;
   }
-  .img2{
-      display: none;
+  .img2 {
+    display: none;
   }
 `;

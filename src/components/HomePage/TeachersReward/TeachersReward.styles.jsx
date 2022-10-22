@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const TeachersRewardStyle = styled.div`
+overflow-x: hidden;
   width: 1440px;
   height: 600px;
   margin-top: 60px;
@@ -94,6 +95,7 @@ export const TeachersRewardStyle = styled.div`
     font-size: 30px;
   }
   @media only screen and (max-width: 500px) {
+    overflow-x: hidden;
     width: 400px;
     display: flex;
     flex-direction: column;

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Footerstyle = styled.div`
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,6 +57,7 @@ export const Footerstyle = styled.div`
   }
 
   @media only screen and (max-width: 500px) {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,8 +68,8 @@ export const Footerstyle = styled.div`
     color: white;
     background-color: black;
   }
-  .firstDiv{
-          margin-top: 5px;
+  .firstDiv {
+    margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;

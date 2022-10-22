@@ -1,5 +1,6 @@
 import styled from "styled-components";
 export const NavbarStyle = styled.div`
+  overflow-x: hidden;
   /* position: sticky; */
   top: 0px;
   background: white;
@@ -25,7 +26,7 @@ export const NavbarStyle = styled.div`
     font-weight: 400;
     font-size: 16px;
   }
-  .dropDown{
+  .dropDown {
     display: none;
   }
   .text {
@@ -74,6 +75,7 @@ export const NavbarStyle = styled.div`
     display: none;
   }
   @media only screen and (max-width: 500px) {
+    overflow-x: hidden;
     padding-top: 2rem;
     display: flex;
     justify-content: center;

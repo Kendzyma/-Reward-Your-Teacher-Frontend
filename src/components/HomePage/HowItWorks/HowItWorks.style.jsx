@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const HowItWorksStyles = styled.div`
+  overflow-x: hidden;
   width: 1440px;
   height: 716px;
   left: 0px;
@@ -50,6 +51,7 @@ export const HowItWorksStyles = styled.div`
   }
 
   @media only screen and (max-width: 500px) {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -71,7 +73,7 @@ export const HowItWorksStyles = styled.div`
       line-height: 48px;
       margin-left: 20px;
       color: #03435f;
-margin-left: 100px;
+      margin-left: 100px;
       color: #012a4a;
     }
     .topDiv {
