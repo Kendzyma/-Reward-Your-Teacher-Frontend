@@ -7,6 +7,7 @@ import { StudentSignUpStyle } from "./StudentSignUp.style";
 import { GoogleLogin } from "react-google-login";
 import { gapi } from "gapi-script";
 import LoadingRing from "../../common/LoadingRing";
+import { useNavigate } from "react-router-dom";
 
 
 const StudentSignUp = () => {
@@ -34,9 +35,6 @@ const StudentSignUp = () => {
     console.log("failed", err);
   };
 
-  const logOut = () => {
-    setProfile(null);
-  };
 
   const clientId =
     "966153512513-finqplcdnb16vp3kn4la8uik29vdje8k.apps.googleusercontent.com";

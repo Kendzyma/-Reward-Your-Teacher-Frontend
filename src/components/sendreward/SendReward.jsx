@@ -8,7 +8,8 @@ import LoadingRing from "../../common/LoadingRing";
 const SendReward = () => {
   const [amount, setAmount] = useState("");
   const [loading,setLoading] = useState(false);
-
+const[name,setName] = useState("");
+const[phoneNumber,setPhoneNumber] = useState("");
 const [modal,setModal] = useState(false);
    const location = useLocation();
    const teacherDetails = location.state.teacher;

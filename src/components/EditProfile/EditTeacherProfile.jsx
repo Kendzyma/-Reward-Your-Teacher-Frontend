@@ -22,6 +22,8 @@ const EditTeacherProfile = () => {
   const [position, setPosition] = useState(null);
   const [loading, setLoading] = useState(false);
   const [schoolList, setSchoolList] = useState([]);
+  const [email,setEmail] = useState("");
+  const [password,setPassword] = useState("");
   const navigate = useNavigate();
   const edit = "Edit";
   const logout = () => {

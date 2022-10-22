@@ -12,6 +12,7 @@ const token1 = localStorage.getItem("token");
 const token = "Bearer " + token1.substring(8, token1.length - 1);
 const appreciate = "Appreciate Student";
 const [loading,setLoading] = useState(false);
+const[isClicked,setIsClicked] = useState("");
 console.log("this is the transaction id",transactionId)
 const AppreciateStudent = async () => {
   setLoading(true);
