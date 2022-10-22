@@ -1,12 +1,9 @@
-import React, { useMemo, useState } from "react";
-import { LoginStyle } from "./StudentLogin.style";
+import React, {useState } from "react";
 import RewardYourTeacherIcon from "../../common/RewardYourTeacherIcon";
 import { Link, useNavigate } from "react-router-dom";
-import Googlebutton from "../../common/Googlebutton";
 import { TeacherLoginStyle } from "./TeacherLogin.style";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
-import { ColorRing } from "react-loader-spinner";
 import LoadingRing from "../../common/LoadingRing";
 import GoogleLogin from "react-google-login";
 const TeacherLogin = () => {
@@ -17,7 +14,6 @@ const TeacherLogin = () => {
    const [lastName, setLastName] = useState("");
    const [firstName, setFirstName] = useState("");
    const [imageUrl, setImageUrl] = useState("");
-   const [success,setSuccess] = useState(false);
   const navigate = useNavigate();
 const Login = "Login"
 const clientId =

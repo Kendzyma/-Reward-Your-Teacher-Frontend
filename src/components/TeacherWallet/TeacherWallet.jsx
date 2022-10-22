@@ -1,22 +1,12 @@
 import React, { useEffect, useState } from "react";
-import RewardYourTeacherIcon from "../../common/RewardYourTeacherIcon";
-import profilepicture from "../HomePage/images/ProfilePicture.png";
-import overview from "../HomePage/images/Overview.png";
-import schoolImage from "../HomePage/images/Group.png";
-import notification from "../HomePage/images/Notification.png"
 import { TeacherWalletStyle } from "./TeacherWallet.style";
 import axios from "axios";
-import transitions from "@material-ui/core/styles/transitions";
-import { Link, useNavigate } from "react-router-dom";
-import logout1 from "../HomePage/images/Logout.png"
-import DropDown from "../DropDown/dropdown";
-import LogoutModal from "../Modal/LogoutModal/LogoutModal";
+import { useNavigate } from "react-router-dom";
 import ViewStudentProfile from "../ViewStudentProfile/ViewStudentProfile";
 import NavBarSideBar from "../../common/NavBarSideBar";
 
 export default function TeacherWallet() {
-   const [dropDown, setDropDown] = useState(false);
-   const [confirmation, setConfirmation] = useState(false);
+
    const [studentProfile, setStudentProfile] = useState(false);
    const [studentId, setStudentId] = useState("");
    const [studentName,setStudentName]= useState("");
@@ -30,29 +20,15 @@ export default function TeacherWallet() {
     else return 0;
   }
 
-    const name = localStorage
-      .getItem("first")
-      .substring(1, localStorage.getItem("first").length - 1);
+
  const[wallet,setWallet] = useState([]);
   const [transaction, setTransaction] = useState([]);
  const token1 = localStorage.getItem("token");
  const navigate = useNavigate();
 
- const logout = () => {
-   localStorage.removeItem("token-info");
-   navigate("/teacher/login");
- };
- const Confirmation = () => {
-   setConfirmation(!confirmation);
- };
+
  const ShowModal = () => {
   setStudentProfile(!studentProfile);
- }
- const overView = () =>{
-  navigate("/teacher/dashboard")
- }
- const NotificationPage = () => {
-  navigate("/teacher/notification")
  }
 
 

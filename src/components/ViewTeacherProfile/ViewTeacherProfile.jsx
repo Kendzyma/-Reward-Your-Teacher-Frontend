@@ -1,18 +1,15 @@
 import React, { useState } from "react";
 import {ViewTeacherProfileStyle,} from "./ViewTeacherProfile.style";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import cancel from "../Modal/FundWalletModal/cancel.png"
 export default function ViewTeacherProfile(props) {
   const{teacher,closeModal} = props;
-  const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const token1 = localStorage.getItem("token");
   const teacherDetails = teacher
 
   console.log("This is the teacher details" + teacherDetails);
-  const token = "Bearer " + token1.substring(8, token1.length - 1);
 
-   const profilePics = localStorage.getItem("picture");
    let url;
    if (teacherDetails.displayPicture != null) {
      url = teacherDetails.displayPicture;

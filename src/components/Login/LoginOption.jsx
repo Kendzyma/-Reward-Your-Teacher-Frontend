@@ -1,6 +1,5 @@
 import React from 'react'
 import { Buttons } from '../../common/buttons';
-import RewardYourTeacherIcon from '../../common/RewardYourTeacherIcon';
 import Navbar from '../HomePage/navbar/navbar';
 import { LoginOptionStyle } from './LoginOption.style'
 

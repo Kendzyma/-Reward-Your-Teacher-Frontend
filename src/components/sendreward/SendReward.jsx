@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
-import { ColorRing } from "react-loader-spinner";
 import { SendRewardStyle } from "./sendreward.style";
 import SuccessModal from "../Modal/SuccessModal/SuccessModal";
 import LoadingRing from "../../common/LoadingRing";
 const SendReward = () => {
-  const [name, setName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
   const [amount, setAmount] = useState("");
   const [loading,setLoading] = useState(false);
-  const navigate = useNavigate();
+
 const [modal,setModal] = useState(false);
    const location = useLocation();
    const teacherDetails = location.state.teacher;

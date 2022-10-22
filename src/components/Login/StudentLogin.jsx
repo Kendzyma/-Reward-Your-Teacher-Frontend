@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import RewardYourTeacherIcon from "../../common/RewardYourTeacherIcon";
 import { Link, useNavigate } from "react-router-dom";
-import Googlebutton from "../../common/Googlebutton";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import { StudentLoginStyle } from "./StudentLogin.style";
-import { ColorRing } from "react-loader-spinner";
-import { getActiveElement } from "@testing-library/user-event/dist/utils";
 import LoadingRing from "../../common/LoadingRing";
 import { gapi } from "gapi-script";
 import GoogleLogin from "react-google-login";

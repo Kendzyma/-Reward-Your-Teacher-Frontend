@@ -1,22 +1,22 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import add from "../HomePage/images/Add.png";
 import background from "../HomePage/images/background.png";
 import TotalMoney from "../HomePage/images/MoneyRecieved.png";
-import { StudentWalletStyle, TeacherWalletStyle } from "./StudentWallet.style";
+import { StudentWalletStyle } from "./StudentWallet.style";
 import axios from "axios";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import FundWalletModal from "../Modal/FundWalletModal/FundWallet";
 import NavBarSideBar from "../../common/NavBarSideBar";
-import { FaBars } from "react-icons/fa";
+
 
 export default function StudentWallet() {
   // const name = localStorage
   //   .getItem("first")
   //   .substring(1, localStorage.getItem("first").length - 1);
   const [wallet, setWallet] = useState([]);
-  const [dropDown, setDropDown] = useState(false);
+
   const [confirmation, setConfirmation] = useState(false);
-  const [transaction, setTransaction] = useState([]);
+
   const [hide, setHide] = useState("");
   const token1 = localStorage.getItem("token");
   const navigate = useNavigate();
@@ -24,12 +24,8 @@ export default function StudentWallet() {
   const balance = numberWithCommas(wallet.balance)+".00";
   const totalMoneySent = numberWithCommas(wallet.totalMoneySent)+".00";
   const [show, setShow] = useState(false);
-   const location = new useLocation()
 
 
-  const ShowBars = () => {
-    setShow(!show);
-  };
   const CloseModal = () => {
     setFundModal(false);
   };
@@ -38,14 +34,7 @@ export default function StudentWallet() {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     } else return 0;
   }
-  const Confirmation = () => {
-    setConfirmation(!confirmation);
-  };
 
-  const logout = () => {
-    localStorage.removeItem("token-info");
-    navigate("/student/login");
-  };
   async function FetchWalletBalance() {
     const token = "Bearer " + token1.substring(8, token1.length - 1);
 
@@ -67,41 +56,11 @@ export default function StudentWallet() {
     FetchWalletBalance();
   }, []);
 
-  const hidebutton = () => {
-    setHide(!hide);
-  };
 
-//   async function FetchTransaction() {
-//     const token1 = localStorage.getItem("token");
-//     const token = "Bearer " + token1.substring(8, token1.length - 1);
-
-//     axios
-//       .get(
-//         `http://localhost:9001/api/v1/transaction/student?offset=0&pageSize=10`,
-//         {
-//           headers: {
-//             Authorization: `${token}`,
-//           },
-//         }
-//       )
-//       .then((res) => {
-//         setTransaction(res.data.data);
-//         console.log(res.data.data);
-
-//       })
-//       .catch((error) => {
-//         navigate("/student/dashboard");
-//         console.error(error);
-//       });
-//   }
-//   useEffect(() => {
-//     FetchTransaction();
-//   }, []);
-// console.log(balance)
   return (
     <StudentWalletStyle>
       <NavBarSideBar show={true} option="student" />
-      {/* <FaBars className="bars" onClick={ShowBars} /> */}
+  
       {fundModal && (
         <FundWalletModal
           walletAmount={balance}

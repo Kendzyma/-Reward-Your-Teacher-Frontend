@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ViewStudentProfileStyle } from "./ViewStudentProfile.style";
 import { RiCloseFill } from "react-icons/ri";
-import Logo from "../HomePage/images/profile-image.png";
 import thumb from "../HomePage/images/thumbs-up.png";
 import axios from "axios";
 import LoadingRing from "../../common/LoadingRing";
@@ -13,7 +12,6 @@ const token1 = localStorage.getItem("token");
 const token = "Bearer " + token1.substring(8, token1.length - 1);
 const appreciate = "Appreciate Student";
 const [loading,setLoading] = useState(false);
-const[isClicked,setIsClicked] = useState(false);
 console.log("this is the transaction id",transactionId)
 const AppreciateStudent = async () => {
   setLoading(true);

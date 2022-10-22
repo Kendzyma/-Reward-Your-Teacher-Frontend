@@ -24,25 +24,14 @@ import {
 } from "./AllTeachersInASchool.style.jsx";
 import { VscSettings } from "react-icons/vsc";
 import { AiOutlineSearch } from "react-icons/ai";
-import profilepicture from "../HomePage/images/ProfilePicture.png";
-import overview from "../HomePage/images/Overview.png";
-import schoolImage from "../HomePage/images/Group.png";
-import notification from "../HomePage/images/Notification.png";
-import { RiArrowRightSLine } from "react-icons/ri";
-import RewardYourTeacherIcon from "../../common/RewardYourTeacherIcon.jsx";
-import logout1 from "../HomePage/images/Logout.png";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import {useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import ViewTeacherProfile from "../ViewTeacherProfile/ViewTeacherProfile.jsx";
-import Items from "../../common/Pagnation.jsx";
-import DropDown from "../DropDown/dropdown.jsx";
-import LogoutModal from "../Modal/LogoutModal/LogoutModal.jsx";
 import NavBarSideBar from "../../common/NavBarSideBar.jsx";
 
 export const AllTeachersInASchool = () => {
-   const [dropDown, setDropDown] = useState(false);
   const token1 = localStorage.getItem("token");
    const [confirmation, setConfirmation] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
@@ -57,17 +46,9 @@ export const AllTeachersInASchool = () => {
   const CloseModal = () => {
     setShowDetails(false);
   };
-  const Confirmation = () => {
-    setConfirmation(!confirmation);
-  };
 
   const navigate = useNavigate();
-  const logout = () => {
-    localStorage.removeItem("token-info");
-    navigate("/student/login");
-  };
   const [teacherList, setTeacherList] = useState([]);
-  const [chooseSchool, setChooseSchool] = useState("");
 
   async function FetchSchools() {
     //  const location = new Location()

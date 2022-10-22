@@ -3,18 +3,15 @@ import React, { useEffect, useState } from "react";
 import RewardYourTeacherIcon from "../../common/RewardYourTeacherIcon";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { ColorRing } from "react-loader-spinner";
 import { StudentSignUpStyle } from "./StudentSignUp.style";
-import Googlebutton from "../../common/Googlebutton";
-import { useNavigate } from "react-router-dom";
-import { GoogleLogin, GoogleLogout } from "react-google-login";
+import { GoogleLogin } from "react-google-login";
 import { gapi } from "gapi-script";
 import LoadingRing from "../../common/LoadingRing";
 
 
 const StudentSignUp = () => {
   const SignUp =  "Sign Up";
-  const [profile, setProfile] = useState([]);
+
 
 
   useEffect(() => {
@@ -45,9 +42,6 @@ const StudentSignUp = () => {
     "966153512513-finqplcdnb16vp3kn4la8uik29vdje8k.apps.googleusercontent.com";
     
   const [name, setName] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [school, setSchool] = useState("");

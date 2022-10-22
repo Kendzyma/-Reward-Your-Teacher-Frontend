@@ -2,11 +2,9 @@ import React, {useState} from "react";
 import Navbutton from "../../../common/navbutton";
 import { NavbarStyle } from "./navbar.style";
 import { Buttons } from "../../../common/buttons";
-import image from '../images/Frame.png';
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import RewardYourTeacherIcon from "../../../common/RewardYourTeacherIcon"; 
 import { FaBars } from "react-icons/fa";
-import shadows from "@material-ui/core/styles/shadows";
 export default function Navbar() {
   const [show, setShow] = useState(false)
   const ShowBars = () =>{

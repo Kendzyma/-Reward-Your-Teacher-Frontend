@@ -5,10 +5,8 @@ import RewardYourTeacherIcon from "../../common/RewardYourTeacherIcon";
 import { TeacherSignUpStyle } from "./TeacherSignUp.style";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { ColorRing } from "react-loader-spinner";
-import Googlebutton from "../../common/Googlebutton";
 import { gapi } from "gapi-script";
-import { GoogleLogin, GoogleLogout } from "react-google-login";
+import { GoogleLogin } from "react-google-login";
 import LoadingRing from "../../common/LoadingRing";
 
 const TeacherSignUp = () => {
@@ -27,7 +25,7 @@ const TeacherSignUp = () => {
   const [loading, setLoading] = useState(false);
   const [schoolList, setSchoolList] = useState([]);
   const navigate = useNavigate();
-  const [profile, setProfile] = useState([]);
+  const [setProfile] = useState([]);
   
     const SignUp = "Sign Up"
     useEffect(() => {
@@ -49,9 +47,7 @@ const TeacherSignUp = () => {
       console.log("failed", err);
     };
 
-    const logOut = () => {
-      setProfile(null);
-    };
+
 
     const clientId =
       "966153512513-finqplcdnb16vp3kn4la8uik29vdje8k.apps.googleusercontent.com";

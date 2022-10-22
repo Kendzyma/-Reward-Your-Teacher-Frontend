@@ -12,8 +12,6 @@ const EditTeacherProfile = () => {
 
   const [confirmation, setConfirmation] = useState(false);
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [school, setSchool] = useState("");
   const [yearsOfTeaching, setYearsOfTeaching] = useState("");
   const [subjectTaught, setSubjectTaught] = useState("");

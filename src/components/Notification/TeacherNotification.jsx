@@ -1,17 +1,10 @@
 import React from 'react'
-import RewardYourTeacherIcon from '../../common/RewardYourTeacherIcon';
-import overview from "../HomePage/images/Overview.png";
-import notification from "../HomePage/images/Notification.png";
-import profilepicture from "../HomePage/images/ProfilePicture.png";
-import logout1 from "../HomePage/images/Logout.png";
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import DropDown from '../DropDown/dropdown';
 import axios from 'axios';
 import { useEffect } from 'react';
 import { TeacherNotificationStyle } from './TeacherNotification.style';
 import NavBarSideBar from '../../common/NavBarSideBar';
-import { toast } from 'react-toastify';
+
 
 export default function TeacherNotification() {
 const[notification,setNotification] = useState([]);
@@ -42,17 +35,6 @@ const[notification,setNotification] = useState([]);
     FetchNotification();
   }, []);
 
-  const [confirmation, setConfirmation] = useState(false);
-  const [dropDown, setDropDown] = useState(false);
-  const Confirmation = () => {
-    setConfirmation(!confirmation);
-  };
-
-    const navigate = useNavigate();
-    const logout = () => {
-        localStorage.removeItem("token-info");
-        navigate("/teacher/login");
-      };
   return (
     <TeacherNotificationStyle>
       <NavBarSideBar option="teacher" />
